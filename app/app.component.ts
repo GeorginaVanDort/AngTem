@@ -6,13 +6,16 @@ import { Component } from 'angular2/core';
   selector: 'my-app',
   directives: [],
   template: `
-
-  `
+    <div class="container">
+    <h1 (click)="onClickMe()"> Green Eggs and Ham </h1>
+    {{message}}
+    `
 })
 
 export class AppComponent {
-  public property: string ;
-  constructor(){
-    this.property = ""
+  message = ''
+
+onClickMe(){
+  this.message = 'Sam I am!';
   }
 }
